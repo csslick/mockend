@@ -1,19 +1,14 @@
 {
-  "books": [
-    {
-      "title": "채식주의자",
-      "author": "한강",
-      "price": "120000"
-    },
-    {
-      "title": "종의 기원",
-      "author": "정유정",
-      "price": "10000"
-    },
-    {
-      "title": "다르게 보는 힘",
-      "author": "이종인",
-      "price": "12600"
+  "Post": {
+    "title": { "string": {} },
+    "comments": {
+      "hasMany": "Comment"
     }
-  ]
+  },
+  "Comment": {
+    "body": { "string": {} },
+    "post": {
+      "belongsTo": "Post"
+    }
+  }
 }
