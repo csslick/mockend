@@ -1,6 +1,14 @@
 {
   "Post": {
-    "title": "첫번째 타이틀",
-    "comments": "첫번째 글"
+    "title": { "string": {} },
+    "comments": {
+      "hasMany": "Comment"
+    }
   },
+  "Comment": {
+    "body": { "string": {} },
+    "post": {
+      "belongsTo": "Post"
+    }
+  }
 }
